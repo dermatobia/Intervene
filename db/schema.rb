@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626230525) do
+ActiveRecord::Schema.define(version: 20140904185113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,56 @@ ActiveRecord::Schema.define(version: 20140626230525) do
     t.integer  "intervention_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "school_districts", force: true do |t|
+    t.string   "name"
+    t.string   "contact_person"
+    t.string   "contact_email"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "school_system_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.string   "fax"
+  end
+
+  create_table "school_systems", force: true do |t|
+    t.string   "name"
+    t.string   "contact_person"
+    t.string   "contact_email"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.string   "fax"
+  end
+
+  create_table "schools", force: true do |t|
+    t.string   "district"
+    t.string   "name"
+    t.string   "mission"
+    t.string   "image_url"
+    t.string   "website"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "work_phone"
+    t.string   "fax"
+    t.integer  "school_district_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "zip_code"
+    t.string   "image_upload"
   end
 
   create_table "service_providers", force: true do |t|
