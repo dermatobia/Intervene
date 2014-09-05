@@ -18,21 +18,17 @@ class SchoolsController < ApplicationController
   private 
 
   def school_params
-    params.require(:school).
-      permit( :district,
-              :name,
-              :mission,
-              :image_url,
-              :image_upload,
-              :website,
+    params.require(:school_system).
+      permit( :name,
+              :contact_person,
+              :contact_email,
               :street1,
               :street2,
               :city,
               :state,
-              :work_phone,
-              :fax,
-              :school_district_id,
-              :zip_code
+              :zip_code,
+              :phone,
+              :fax
         )
   end
   
