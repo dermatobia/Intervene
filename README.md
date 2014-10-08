@@ -23,10 +23,7 @@ rake db:seed
 ```
 
 
-#### Database Model on 090714
-![Database model on 090714](090714_Intervene.png)
+Database model](090414_Weintervene2.png)
 
-
-#### Model on 090414
-![ Database model](090414_Weintervene2.png)
-
+#### Model on 100814
+![ Database model](100814_any_user_model.png)
